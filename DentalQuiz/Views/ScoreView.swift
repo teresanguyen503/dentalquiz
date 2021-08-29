@@ -34,7 +34,7 @@ struct ScoreView: View {
                             .cornerRadius(25) .padding(.horizontal, 20)
                     })
             }
-            .foregroundColor(.white)
+            .foregroundColor(.black)
             .navigationBarHidden(true)
         }
     }
