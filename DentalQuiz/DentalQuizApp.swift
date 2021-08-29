@@ -2,7 +2,7 @@
 //  DentalQuizApp.swift
 //  DentalQuiz
 //
-//  Created by Teresa Nguyen on 8/27/21.
+//  Created by Teresa Nguyen on 8/6/21.
 //
 
 import SwiftUI
@@ -11,7 +11,7 @@ import SwiftUI
 struct DentalQuizApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            WelcomeView()
         }
     }
 }
