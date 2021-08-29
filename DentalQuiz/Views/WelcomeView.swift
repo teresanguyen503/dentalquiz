@@ -12,7 +12,7 @@ struct WelcomeView: View {
         NavigationView {
             ZStack {
                 ColorScheme.main.ignoresSafeArea()
-                HStack {
+                VStack {
                     Spacer()
                     VStack(alignment: .leading, spacing: 0) {
                         Text("Select the correct answers to the following questions.")
