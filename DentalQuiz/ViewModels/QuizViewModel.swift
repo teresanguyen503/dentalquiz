@@ -7,9 +7,9 @@
 
 import SwiftUI
 
-class GameViewModel: ObservableObject {
+class QuizViewModel: ObservableObject {
     
-    @Published private var game = Game()
+    @Published private var game = Quiz()
     
     var currentQuestion: Question {
         game.currentQuestion

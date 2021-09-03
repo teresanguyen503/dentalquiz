@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct QuestionView: View {
-    @EnvironmentObject var viewModel: GameViewModel
+    @EnvironmentObject var viewModel: QuizViewModel
     let question: Question
     
     var body: some View {
@@ -24,7 +24,7 @@ struct QuestionView: View {
                         viewModel.makeGuess(atIndex: index)
                         print("Tapped on option with the text: \(question.possibleAnswers[index])")
                     } label: {
-                        ChoiceTextView(choiceText: question.possibleAnswers[index])
+                        MultipleChoiceView(choiceText: question.possibleAnswers[index])
                             .background(viewModel.color(forOptionIndex: index) .cornerRadius(25) .padding(.horizontal, 20))
                     }
                     .disabled(viewModel.guessWasMade)
@@ -43,7 +43,7 @@ struct QuestionView: View {
 
 struct QuestionView_Previews: PreviewProvider {
     static var previews: some View {
-        QuestionView(question: Game().currentQuestion)
-            .environmentObject(GameViewModel())
+        QuestionView(question: Quiz().currentQuestion)
+            .environmentObject(QuizViewModel())
     }
 }

@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct ScoreView: View {
-    let viewModel: ScoreViewModel
+struct ResultsView: View {
+    let viewModel: ResultsViewModel
     
     var body: some View {
         ZStack {
@@ -28,7 +28,7 @@ struct ScoreView: View {
                 }.font(.system(size: 30))
                 Spacer()
                 NavigationLink(
-                    destination: GameView(),
+                    destination: QuizView(),
                     label: {
                         BottomTextView(str: "Re-take Quiz")
                             .cornerRadius(25) .padding(.horizontal, 20)
@@ -42,6 +42,6 @@ struct ScoreView: View {
 
 struct ScoreView_Previews: PreviewProvider {
     static var previews: some View {
-        ScoreView(viewModel: ScoreViewModel(correctGuesses: 5, incorrectGuesses: 5))
+        ResultsView(viewModel: ResultsViewModel(correctGuesses: 5, incorrectGuesses: 5))
     }
 }

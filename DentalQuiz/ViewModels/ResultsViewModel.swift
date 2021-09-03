@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct ScoreViewModel {
+struct ResultsViewModel {
     let correctGuesses: Int
     let incorrectGuesses: Int
     

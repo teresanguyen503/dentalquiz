@@ -24,9 +24,9 @@ struct WelcomeView: View {
                     Spacer()
                     Spacer()
                     NavigationLink(
-                        destination: GameView(),
+                        destination: QuizView(),
                         label: {
-                            BottomTextView(str: "Okay let's go!")
+                            BottomTextView(str: "Lets get started 😁")
                                 .cornerRadius(25) .padding(.horizontal, 20)
                         })
                 }

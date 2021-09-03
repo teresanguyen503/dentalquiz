@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-struct ChoiceTextView: View {
+struct MultipleChoiceView: View {
     let choiceText: String
 
     var body: some View {
@@ -24,6 +24,6 @@ struct ChoiceTextView: View {
 
 struct ChoiceTextView_Previews: PreviewProvider {
     static var previews: some View {
-        ChoiceTextView(choiceText: "Choice text")
+        MultipleChoiceView(choiceText: "Multiple Choice")
     }
 }

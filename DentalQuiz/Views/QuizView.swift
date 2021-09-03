@@ -7,8 +7,8 @@
 
 import SwiftUI
 
-struct GameView: View {
-    @StateObject var viewModel = GameViewModel()
+struct QuizView: View {
+    @StateObject var viewModel = QuizViewModel()
     
     var body: some View {
         ZStack {
@@ -25,7 +25,7 @@ struct GameView: View {
             .environmentObject(viewModel)
         }
         .background(
-            NavigationLink(destination: ScoreView(viewModel: ScoreViewModel(correctGuesses: viewModel.correctGuesses,
+            NavigationLink(destination: ResultsView(viewModel: ResultsViewModel(correctGuesses: viewModel.correctGuesses,
                            incorrectGuesses: viewModel.incorrectGuesses)),
                            isActive: .constant(viewModel.gameIsOver),
                            label: { EmptyView() })
@@ -36,6 +36,6 @@ struct GameView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        GameView()
+        QuizView()
     }
 }
